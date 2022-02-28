@@ -1,4 +1,9 @@
-### Hi there 👋
+### Hi, I am Howard 👋 
+
+I worked on a robotics and deep-learning.
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk)](https://github.com/anuraghazra/github-readme-stats)
+
 
 <!--
 **bmaxdk/bmaxdk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
