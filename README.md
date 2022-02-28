@@ -4,7 +4,6 @@ I worked on a robotics and deep-learning.
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=radical)
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true)
 
 <!--
 **bmaxdk/bmaxdk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
