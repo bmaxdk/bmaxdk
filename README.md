@@ -24,11 +24,6 @@ I worked on a robotics and deep-learning.
 ### Stats 📊 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 
-### Traffic📈
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-
-
-
 
 <!--
 **bmaxdk/bmaxdk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -43,4 +38,11 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
+
+### Traffic📈
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+
+
+
 -->
