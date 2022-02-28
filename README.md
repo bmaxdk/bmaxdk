@@ -2,8 +2,6 @@
 
 I worked on a robotics and deep-learning.
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk)](https://github.com/anuraghazra/github-readme-stats)
-
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=radical)
 
 
