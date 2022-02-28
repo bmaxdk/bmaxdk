@@ -21,14 +21,12 @@ I worked on a robotics and deep-learning.
 
 
 
+### Stats 📊 
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 
 ### Traffic📈
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
-
-
-### Stats 📊 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 
 
 
