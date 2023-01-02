@@ -2,7 +2,7 @@
 
 ## I am a Robotics Research Software Engineering
 
-## I worked on a robotics and deep-learning.
+<!-- ## I worked on a robotics and deep-learning. -->
 
 
 ### Experienced 💻
