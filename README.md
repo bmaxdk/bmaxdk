@@ -7,7 +7,7 @@
 
 ### Experienced 💻
 
-### Language🌱 
+### Language🔥
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white), ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white), ![Matlab](	https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg), ![CMake](	https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
 
 ### Library
@@ -27,7 +27,7 @@
 ##### Version Control
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white), ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
 
-### LeetCode🔥
+### LeetCode📈
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
 
 ### Stats 📊 
