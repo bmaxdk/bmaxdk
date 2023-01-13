@@ -10,7 +10,7 @@
 ### Language🔥
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white), ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white), ![Matlab](	https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg), ![CMake](	https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
 
-### Library
+### Library🌠
 ![tensorflow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white), ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white), ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white), ![cuda](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white), ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=Numba&logoColor=white), ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=NumPy&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&for-the-badge&logo=OpenCV&logoColor=white)
 
