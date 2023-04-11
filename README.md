@@ -31,7 +31,7 @@
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
 
 ### Stats 📊 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
+![Howard's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 
 <!-- ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap) -->
 
