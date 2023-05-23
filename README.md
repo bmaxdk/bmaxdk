@@ -43,6 +43,7 @@ I am a Robotics Research Software Engineering
 
 <!-- ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap) -->
 
+<!-- ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact&hide=csharp) -->
 
 <!--
 **bmaxdk/bmaxdk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
