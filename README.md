@@ -5,7 +5,7 @@
 
 <h1 align="center">Hi there, I am Howard 👋🏼👨🏻‍💻</h1>
 <br><br>
-I am a Robotics Research Software Engineering at 
+I am a Robotics Research Software Engineering
 <br><br>
 <!-- ## I worked on a robotics and deep-learning. -->
 
