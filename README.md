@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20👋🏼&fontSize=40&animation=twinkling)
+  ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20🔭&fontSize=40&animation=twinkling)
 <!-- ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=220&section=header&text=Robotics%20Research%20Software%20Engineering&fontSize=40&animation=twinkling) -->
 <!-- <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
@@ -64,7 +64,7 @@ I am a Robotics Research Software Engineering
 <!-- ![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white) -->
 
 <br><br>
-## Tool🛠️
+## Tools🛠️
 <!-- ### IDE -->
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white), ![Qt](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white), ![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?&style=flat&logo=sublime-text&logoColor=important), ![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-2C2255?style=flat-square&logo=Eclipse-IDE&logoColor=white), ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=flat-square&logo=Visual-Studio&logoColor=white)
 
