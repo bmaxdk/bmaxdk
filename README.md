@@ -54,7 +54,7 @@ I am a Robotics Research Software Engineering
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white) ![Matlab](	https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
  ![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
  
-<!--   ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white) -->
+  ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)
 
 <!-- ### Library🌠 -->
 ![tensorflow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white) ![cuda](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white) 
@@ -65,7 +65,6 @@ I am a Robotics Research Software Engineering
 ![ROS2](https://img.shields.io/static/v1?style=flat&for-the-badge&message=ROS2&color=22315E&logo=ROS&logoColor=FFFFFF&label=)
 
 <!-- ![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white) -->
-
 <br><br>
 ## Tools🛠️
 <!-- ### IDE -->
