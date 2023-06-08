@@ -83,7 +83,8 @@ I am a Robotics Research Software Engineering
 ## Stats 📊 
 ![Howard's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 ![Howard's GitHub stats](https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk&show_icons=true&theme=dark)
-![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
+<!-- ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark?ext=heatmap) -->
+![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap)
 
   
 <!--   <img src="https://komarev.com/ghpvc/?username=bmaxdk&style=flat-square&color=blue" alt=""/> -->
