@@ -51,7 +51,7 @@ I am a Robotics Research Software Engineering
 ## Skills 💻
 
 <!-- ### Language🔥 -->
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=C&logoColor=white) ![Matlab](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white) ![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=C&logoColor=white) ![Matlab](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
  ![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
  
   ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)
