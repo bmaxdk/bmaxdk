@@ -1,57 +1,28 @@
 <div align="center">
 
-  ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20🔭&fontSize=40&animation=twinkling)
-<!-- ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=220&section=header&text=Robotics%20Research%20Software%20Engineering&fontSize=40&animation=twinkling) -->
-<!-- <div id="header" align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-</div> -->
-<!-- <div id="badges">
-  <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
-  <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-</div>
-   -->
-<!-- <div id="badges">
-  <a href="your-linkedin-URL">
-    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a>
-  <a href="your-youtube-URL">
-    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
-  </a>
-  <a href="your-twitter-URL">
-    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
-  </a>
-</div> -->
-<!--   
-<img src="https://komarev.com/ghpvc/?username=bmaxdk&style=flat-square&color=blue" alt=""/> -->
-  <br><br>
-  **I am a Robotics Research Software Engineering**
-  <br><br>
-  <div align="center">
-    <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="500" height="200"/>
-  </div>
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20🔭&fontSize=40&animation=twinkling)
   
-  <br><br>
-  ```text
-  Engineering is a rigorous field that continually drives me to exceed my best performance. 
-  I relish the process of troubleshooting and providing solutions.
-  The journey of dissecting intricate problems and devising their solutions fascinates me, 
-  as my creative inputs take shape into a final product that its users find invaluable and enjoyable to use.
-  ```
-  <br><br>
+<br>
 
-<!-- <h1 align="center">Hi there, I am Howard 👋🏼👨🏻‍💻</h1> -->
+## I am a Robotics Research Software Engineering
 
-<!-- <br><br>
-I am a Robotics Research Software Engineering
-<br><br> -->
-<!-- ## I worked on a robotics and deep-learning. -->
+<img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="500" height="200"/>
 
+<br>
 
-## Skills 💻
+> Engineering is a rigorous field that continually drives me to exceed my best performance. 
+> I relish the process of troubleshooting and providing solutions.
+> The journey of dissecting intricate problems and devising their solutions fascinates me, 
+> as my creative inputs take shape into a final product that its users find invaluable and enjoyable to use.
 
-<!-- ### Language🔥 -->
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat&logo=python&logoColor=white) ![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=C&logoColor=white) ![Matlab](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+<br>
+
+## 🛠️ Skills
+
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat-square&logo=C&logoColor=white)
+![Matlab](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
  ![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
  
   ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)
