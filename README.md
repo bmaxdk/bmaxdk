@@ -16,7 +16,7 @@
 
 <br>
 
-## 🛠️ Favorite Skills
+## Favorite Skills 🛠️
 
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
@@ -37,7 +37,7 @@
 
 <!-- ![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white) -->
 <br><br>
-## Favorite Tools🛠️
+## Favorite Tools ⚡
 <!-- ### IDE -->
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white), ![Qt](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white), ![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?&style=flat&logo=sublime-text&logoColor=important), ![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-2C2255?style=flat-square&logo=Eclipse-IDE&logoColor=white), <img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white">
 
