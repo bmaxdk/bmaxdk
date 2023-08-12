@@ -106,7 +106,7 @@ Here are some ideas to get you started:
 ![Activity Graph](https://activity-graph.herokuapp.com/graph?username=bmaxdk&theme=minimal)
 -->
 <!--   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer"> -->
-<details> 
+<details open> 
   <summary><h2>Connect with me 📫</h2></summary>
   <p align="center">
   <a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
