@@ -49,18 +49,37 @@
 <!-- <br><br>
 ## LeetCode📈
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
- -->
- 
+
+
 ## Github Stats 📊 
 
 ![Howard's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 ![Howard's GitHub stats](https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk&show_icons=true&theme=dark) 
-<!-- ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark?ext=heatmap) -->
+![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark?ext=heatmap)
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap)
+
+ -->
+
 
 <br><br>
 <details> 
-  <summary><h2>📈 Github Activity</h2></summary>
+  <summary><h2>Github Stats 📊</h2></summary>
+
+  <a href="https://github.com/bmaxdk/github-readme-stats"><img alt="Howard's Github Stats" src="https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark" height="192px"/></a>
+  
+  <a href="https://github.com/bmaxdk/github-readme-stats"><img alt="Howard's Top Languages" src="https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk&show_icons=true&theme=dark" height="192px"/></a>
+
+  
+  <a href="https://github.com/bmaxdk/github-readme-activity-graph"><img alt="Howard's Leetcode Activity Graph" src="https://leetcard.jacoblin.cool/choh8uw?ext=heatmap" /></a>
+
+</details>
+
+
+
+
+<br><br>
+<details> 
+  <summary><h2>Github Activity 📈</h2></summary>
 
   <a href="https://github.com/bmaxdk/github-readme-stats"><img alt="Howard's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=bmaxdk&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
   
