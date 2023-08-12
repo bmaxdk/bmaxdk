@@ -10,7 +10,6 @@
 
 <br>
 
->
 <br>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Libre+Baskerville&weight=700&size=22&duration=1800&pause=1&color=71706F&center=true&multiline=true&repeat=false&width=1400&height=200&lines=Engineering+is+a+rigorous+field+that+continually+drives+me+to+exceed+my+best+performance.+;+;I+relish+the+process+of+troubleshooting+and+providing+solutions.+;+;The+journey+of+dissecting+intricate+problems+and+devising+their+solutions+fascinates+me%2C+;+;as+my+creative+inputs+take+shape+into+a+final+product+that+its+users+find+invaluable+and+enjoyable+to+use.)](https://git.io/typing-svg)
@@ -51,12 +50,6 @@
 ## LeetCode📈
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
  -->
-<br><br>
-<h3 align="center">Connect with me</h3>
-<p align="center">
-<a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="choh8uw" height="30" width="40" /></a>
-</p>
  
 <br><br>
 ## Stats 📊 
@@ -100,6 +93,12 @@ Here are some ideas to get you started:
 
 -->
 <!--   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer"> -->
+<br><br>
+<h3 align="center">Connect with me</h3>
+<p align="center">
+<a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="choh8uw" height="30" width="40" /></a>
+</p>
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer">
 
