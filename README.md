@@ -45,22 +45,17 @@
 
 <!-- ### Version Control -->
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white), ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
-
 <!-- <br><br>
 ## LeetCode📈
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
-
-
 ## Github Stats 📊 
-
 ![Howard's GitHub stats](https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dark)
 ![Howard's GitHub stats](https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk&show_icons=true&theme=dark) 
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark?ext=heatmap)
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap)
-
  -->
-
-
+</div>
+<div align="center">
 <br><br>
 <details> 
   <summary><h2>Github Stats 📊</h2></summary>
@@ -74,10 +69,6 @@
 
 </details>
 
-
-
-
-<br><br>
 <details> 
   <summary><h2>Github Activity 📈</h2></summary>
 
@@ -91,11 +82,8 @@
 </details>
 
 <!--   <img src="https://komarev.com/ghpvc/?username=bmaxdk&style=flat-square&color=blue" alt=""/> -->
-  
 <!-- ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap) -->
-
 <!-- ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact&hide=csharp) -->
-
 <!--
 **bmaxdk/bmaxdk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -112,24 +100,21 @@ Here are some ideas to get you started:
 
 ### Traffic📈
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-
-
 ![credit_card Github Profile Summary Card top](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bmaxdk&theme=vue)
-
 ![trophy Trophy Stats top](https://github-profile-trophy.vercel.app/?username=bmaxdk)
-
 ![stopwatch Streak Stats top](https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk)
-
 ![Activity Graph](https://activity-graph.herokuapp.com/graph?username=bmaxdk&theme=minimal)
-
 -->
 <!--   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer"> -->
-<br><br>
-<h3 align="center">Connect with me</h3>
-<p align="center">
-<a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="choh8uw" height="30" width="40" /></a>
-</p>
+<details> 
+  <summary><h2>Connect with me 📫</h2></summary>
+  <p align="center">
+  <a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
+  <a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="choh8uw" height="30" width="40" /></a>
+  <p><img src="https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation/blob/main/image/drone1.png" alt="foo bar" title="train &amp; tracks" width="500" /></p>
+
+  </p>
+</details>
 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer">
 
