@@ -4,7 +4,7 @@
   
 <br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=30FFB4&center=true&width=635&lines=%3C%2F%3EI'M+A%3C%5C%3E;Robotics+Research+Software+Engineering)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=30FFB4&center=true&width=635&lines=%3C%2F%3EI'M+A%3C%5C%3E;Robotics+Research+Software+Engineering)](https://github.com/bmaxdk)
 
 <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="500" height="200"/>
 
@@ -12,7 +12,7 @@
 
 <br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Libre+Baskerville&weight=700&size=22&duration=1800&pause=1&color=71706F&center=true&multiline=true&repeat=false&width=1400&height=200&lines=Engineering+is+a+rigorous+field+that+continually+drives+me+to+exceed+my+best+performance.+;+;I+relish+the+process+of+troubleshooting+and+providing+solutions.+;+;The+journey+of+dissecting+intricate+problems+and+devising+their+solutions+fascinates+me%2C+;+;as+my+creative+inputs+take+shape+into+a+final+product+that+its+users+find+invaluable+and+enjoyable+to+use.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Libre+Baskerville&weight=700&size=22&duration=1800&pause=1&color=71706F&center=true&multiline=true&repeat=false&width=1400&height=200&lines=Engineering+is+a+rigorous+field+that+continually+drives+me+to+exceed+my+best+performance.+;+;I+relish+the+process+of+troubleshooting+and+providing+solutions.+;+;The+journey+of+dissecting+intricate+problems+and+devising+their+solutions+fascinates+me%2C+;+;as+my+creative+inputs+take+shape+into+a+final+product+that+its+users+find+invaluable+and+enjoyable+to+use.)](https://github.com/bmaxdk)
 
 <br>
 
