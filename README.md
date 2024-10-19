@@ -23,17 +23,19 @@
 **Programming Languages:**  
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white) ![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat-square&logo=C&logoColor=white) ![MATLAB](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white)
 
-**Libraries & Frameworks:**  
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white) ![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white) ![MXNet](https://img.shields.io/badge/mxnet-%20-blue)
+**Machine Learning & AI Tools:**  
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white) ![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white) 
+![MXNet](https://img.shields.io/badge/mxnet-%20-blue) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-F3F33F?style=flat-square&logo=Hugging%20Face&logoColor=black) 
+
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=NumPy&logoColor=white)  ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=Numba&logoColor=white)  ![JAX](https://img.shields.io/badge/JAX-0071C5.svg?style=flat-square&logo=JAX&logoColor=white)  ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&for-the-badge&logo=OpenCV&logoColor=white)  ![Detectron2](https://img.shields.io/badge/Detectron2-13A0F3?style=flat-square&logo=Detectron2&logoColor=white)  ![RLlib](https://img.shields.io/badge/RLlib-%230F9D58.svg?style=flat-square&logo=Ray&logoColor=white)
+
+
 
 **Robotics Tools:**  
-![ROS](https://img.shields.io/static/v1?style=flat&message=ROS&color=22312E&logo=ROS&logoColor=FFFFFF&label=) ![ROS2](https://img.shields.io/static/v1?style=flat&message=ROS2&color=22315E&logo=ROS&logoColor=FFFFFF) ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&for-the-badge&logo=OpenCV&logoColor=white)
-
-**Machine Learning & AI Tools:**  
-![Deep Reinforcement Learning](https://img.shields.io/badge/Deep%20Reinforcement%20Learning-%23000080.svg?style=flat-square&logoColor=white) ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-%233776AB.svg?style=flat-square&logo=machine-learning&logoColor=white) ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-%23EE4C2C.svg?style=flat-square&logo=deep-learning&logoColor=white)
+![ROS](https://img.shields.io/static/v1?style=flat&message=ROS&color=22312E&logo=ROS&logoColor=FFFFFF&label=) ![ROS2](https://img.shields.io/static/v1?style=flat&for-the-badge&message=ROS2&color=22315E&logo=ROS&logoColor=FFFFFF&label=)
 
 **Other Tools & Platforms:**  
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=NumPy&logoColor=white) ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=Numba&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white) 
 
 <br><br>
 
