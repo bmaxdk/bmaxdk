@@ -1,7 +1,9 @@
 <div align="center">
 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20🔭&fontSize=40&animation=twinkling)
-  
+
+<h3> 👨‍💻 Robotics Research Software Engineer | Research Scientist | Problem Solver 🧠 </h3>
+<p> Driving the future of robotics with deep reinforcement learning and AI—building intelligent systems that learn, adapt, and solve real-world challenges.</p>
 <br>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=30FFB4&center=true&width=635&lines=%3C%2F%3EI'M+A%3C%5C%3E;Robotics+Research+Software+Engineering)](https://github.com/bmaxdk)
@@ -18,33 +20,40 @@
 
 ## Favorite Skills 🛠️
 
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat-square&logo=C&logoColor=white)
-![Matlab](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
- ![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
- 
-  ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white)
+**Programming Languages:**  
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white) ![C](https://img.shields.io/badge/C-%2300599C.svg?style=flat-square&logo=C&logoColor=white) ![MATLAB](https://img.shields.io/badge/MATLAB-%2300299C.svg?style=flat&logoColor=white)
 
-<!-- ### Library🌠 -->
-![tensorflow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white) ![cuda](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white) 
-![mxnet](https://img.shields.io/badge/mxnet-%20-blue)
-  
-  ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=Numba&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=NumPy&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&for-the-badge&logo=OpenCV&logoColor=white)
-![ROS](https://img.shields.io/static/v1?style=flat&for-the-badge&message=ROS&color=22312E&logo=ROS&logoColor=FFFFFF&label=)
-![ROS2](https://img.shields.io/static/v1?style=flat&for-the-badge&message=ROS2&color=22315E&logo=ROS&logoColor=FFFFFF&label=)
+**Libraries & Frameworks:**  
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=PyTorch&logoColor=white) ![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=Keras&logoColor=white) ![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=flat&logo=nvidia&logoColor=white) ![MXNet](https://img.shields.io/badge/mxnet-%20-blue)
 
-<!-- ![ROS](https://img.shields.io/badge/ros-%230A0FF9.svg?style=for-the-badge&logo=ros&logoColor=white) -->
+**Robotics Tools:**  
+![ROS](https://img.shields.io/static/v1?style=flat&message=ROS&color=22312E&logo=ROS&logoColor=FFFFFF&label=) ![ROS2](https://img.shields.io/static/v1?style=flat&message=ROS2&color=22315E&logo=ROS&logoColor=FFFFFF) ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&for-the-badge&logo=OpenCV&logoColor=white)
+
+**Machine Learning & AI Tools:**  
+![Deep Reinforcement Learning](https://img.shields.io/badge/Deep%20Reinforcement%20Learning-%23000080.svg?style=flat-square&logoColor=white) ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-%233776AB.svg?style=flat-square&logo=machine-learning&logoColor=white) ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-%23EE4C2C.svg?style=flat-square&logo=deep-learning&logoColor=white)
+
+**Other Tools & Platforms:**  
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black) ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E?style=flat&logo=Amazon%20AWS&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=NumPy&logoColor=white) ![Numba](https://img.shields.io/badge/Numba-00A3E0?style=flat&logo=Numba&logoColor=white)
+
 <br><br>
+
 ## Favorite Tools ⚡
-<!-- ### IDE -->
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white), ![Qt](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white), ![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?&style=flat&logo=sublime-text&logoColor=important), ![Eclipse IDE](https://img.shields.io/badge/Eclipse%20IDE-2C2255?style=flat-square&logo=Eclipse-IDE&logoColor=white), <img src="https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white">
 
-<!-- , ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat-square&logo=Visual-Studio-Code&logoColor=white) -->
+**IDEs & Editors:**  
+![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=Visual%20Studio%20Code&logoColor=white) ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white) ![Qt](https://img.shields.io/badge/Qt-41CD52?style=flat&logo=qt&logoColor=white) ![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?&style=flat&logo=sublime-text&logoColor=important)
 
-<!-- ### Version Control -->
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white), ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
+**Version Control & Cloud Services:**  
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
+
+<br><br>
+
+<!-- ## My Projects 🚀
+
+- **[ROS2 Navigation and SLAM](https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation):** Building a fully autonomous robot using ROS2 for navigation and SLAM.
+- **[Machine Learning with PyTorch](https://github.com/bmaxdk/Machine-Learning):** Advanced machine learning techniques with PyTorch for diverse applications.
+- **[Multi-Agent Systems with ROS2](https://github.com/bmaxdk/ROS2-Multi-Agent):** Exploring multi-agent coordination and communication in robotics.
+  
+<br><br> -->
 <!-- <br><br>
 ## LeetCode📈
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark)
@@ -109,10 +118,12 @@ Here are some ideas to get you started:
 <details open> 
   <summary><h2>Connect with me 📫</h2></summary>
   <p align="center">
-  <a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="howard-h-cho/" height="30" width="40" /></a>
-  <a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="choh8uw" height="30" width="40" /></a>
-  <p><img src="https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation/blob/main/image/drone1.png" alt="foo bar" title="train &amp; tracks" width="500" /></p>
-
+    <a href="https://linkedin.com/in/howard-h-cho/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="Howard Cho's LinkedIn"/></a>
+    <a href="https://www.leetcode.com/choh8uw" target="blank"><img align="center" src="https://img.shields.io/badge/LeetCode-FFA116?style=flat&logo=leetcode&logoColor=white" alt="Howard Cho's LeetCode"/></a>
+  </p>
+  
+  <p align="center">
+    <img src="https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation/blob/main/image/drone1.png" alt="Howard's drone project" title="Drone Project" width="500"/>
   </p>
 </details>
 
