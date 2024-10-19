@@ -65,7 +65,7 @@
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?theme=dark?ext=heatmap)
 ![Leetcode Stats](https://leetcard.jacoblin.cool/choh08?ext=heatmap)
  -->
-</div>
+<!--</div>
 <div align="center">
 <br><br>
 <details> 
@@ -79,7 +79,7 @@
   <a href="https://github.com/bmaxdk/github-readme-activity-graph"><img alt="Howard's Leetcode Activity Graph" src="https://leetcard.jacoblin.cool/choh8uw?ext=heatmap" /></a>
 
 </details>
-
+ -->
 <details> 
   <summary><h2>Github Activity 📈</h2></summary>
 
