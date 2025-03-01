@@ -9,8 +9,7 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=30FFB4&center=true&width=635&lines=%3C%2F%3EI'M+A%3C%5C%3E;Robotics+Research+Software+Engineering)](https://github.com/bmaxdk)
 
-<img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="500" height="200"/>
-
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjYxeWlyOW80a3czcXRmOTQycmwwcnkyM2syNGkwc2t6bHY2MDUwMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GyxNKYLrHSeNfPoKOy/giphy.gif" width="600" height="300" alt="Futuristic Robotics Animation" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);" />
 <br>
 
 <br>
