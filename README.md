@@ -1,6 +1,7 @@
 <div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120§ion=header&text=Howard%20Cho%20🦾🤖🚀&fontSize=50&animation=twinkling&fontAlignY=40&desc=Robotics%20%7C%20AI%20%7C%20Innovation&descAlignY=65&descAlign=65" />
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Howard%20Cho%20🔭&fontSize=40&animation=twinkling)
+
 
 <h3> 👨‍💻 Robotics Research Software Engineer | Research Scientist | Problem Solver 🧠 </h3>
 <p> Driving the future of robotics with deep reinforcement learning and AI—building intelligent systems that learn, adapt, and solve real-world challenges.</p>
@@ -81,15 +82,17 @@
 </details>
  -->
 <details> 
-  <summary><h2>Github Activity 📈</h2></summary>
-
-  <a href="https://github.com/bmaxdk/github-readme-stats"><img alt="Howard's Github Stats" src="https://github-readme-stats.vercel.app/api/?username=bmaxdk&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
-  
-  <a href="https://github.com/bmaxdk/github-readme-stats"><img alt="Howard's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff" height="192px"/></a>
-
-  
-  <a href="https://github.com/bmaxdk/github-readme-activity-graph"><img alt="Howard's Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph/?username=bmaxdk&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
-
+  <summary><h2>Activity & Stats 📈</h2></summary>
+  <p>
+    <img src="https://github-readme-stats.vercel.app/api?username=bmaxdk&show_icons=true&theme=dracula&hide_border=true&bg_color=0D1117&title_color=FF5555&icon_color=50FA7B" alt="GitHub Stats" height="180" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bmaxdk&layout=compact&theme=dracula&hide_border=true&bg_color=0D1117&title_color=FF5555&icon_color=50FA7B&hide=Jupyter%20Notebook" alt="Top Languages" height="180" />
+  </p>
+  <p>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=bmaxdk&theme=dracula&hide_border=true&background=0D1117&stroke=FF5555&ring=50FA7B&fire=FF5555&currStreakNum=50FA7B" alt="Streak Stats" />
+  </p>
+  <p>
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=bmaxdk&theme=dracula&bg_color=0D1117&color=50FA7B&line=FF5555&point=FFFFFF&hide_border=true" alt="Activity Graph" />
+  </p>
 </details>
 
 <!--   <img src="https://komarev.com/ghpvc/?username=bmaxdk&style=flat-square&color=blue" alt=""/> -->
@@ -129,6 +132,6 @@ Here are some ideas to get you started:
   </p>
 </details>
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&animation=fadeIn" />
 
 </div>
