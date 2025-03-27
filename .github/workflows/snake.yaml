@@ -1,0 +1,57 @@
+name: GitHub Snake Game
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency: github-snake-game
+
+jobs:
+  generate:
+    # Only run if this commit *doesn't* contain [skip ci]
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Step 1: Check out repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      #  Step 2: Cache (handy if you have a large repo or repeated dependencies)
+      - name: Setup Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./.gradle
+            ./.m2
+            ./node_modules
+          key: ${{ runner.os }}-snake-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pom.xml', '**/build.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-snake-
+
+      # Step 3: Generate Snake Animations with multiple color variations
+      - name: Generate GitHub Contributions Snake Animations
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake-rainbow.svg?color_snake=rainbow&color_dots=#FFE79B,#FFD700,#FD943F,#FC5E5A,#E8006F,#FF84C2
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 4: Deploy the generated files to the 'output' branch (GitHub Pages or for embedding)
+      - name: Deploy to Output Branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          commit_message: "Update snake animation [skip ci]"
