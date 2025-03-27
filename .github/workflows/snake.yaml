@@ -4,29 +4,22 @@ on:
   # Run daily at midnight UTC
   schedule:
     - cron: "0 0 * * *"
-  # Allow manual runs
   workflow_dispatch:
-  # Run on pushes to main
   push:
     branches:
       - main
 
-# Prevent the workflow from running multiple times concurrently
 concurrency: github-snake-game
 
 jobs:
-  generate-deploy:
-    # Skip if commit message contains [skip ci]
+  generate:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      # Step 1: Check out repository
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Setup Cache 
-      # Speeds up dependency retrieval
       - name: Setup Cache
         uses: actions/cache@v3
         with:
@@ -38,40 +31,28 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-snake-
 
-      # Generate multiple Snake animations with advanced color palettes
       - name: Generate GitHub Contributions Snake Animations
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            # Default
             dist/github-snake.svg
-            # GitHub Dark Mode
             dist/github-snake-dark.svg?palette=github-dark
-            # Rainbow
             dist/github-snake-rainbow.svg?color_snake=rainbow&color_dots=#FFE79B,#FFD700,#FD943F,#FC5E5A,#E8006F,#FF84C2
-            # Ocean
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-            # Neon (magenta snake, bright dots)
-            dist/neon.svg?color_snake=#FF00FF&color_dots=#39FF14,#FFEA00,#FF00E4,#00E5FF
-            # Pastel (soft snake, pastel dots)
-            dist/pastel.gif?color_snake=#FFAACC&color_dots=#FFD1DC,#D7FFDC,#C7EFFF,#FFCFCF
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Upload artifacts so you can download them from the Actions tab
       - name: Upload Snake Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "Snake Animations"
           path: dist
 
-      # Deploy the generated files to the 'output' branch
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: output
-          # Add a date or run number in the commit message for clarity
-          commit_message: "Update Snake animation on $(date '+%Y-%m-%d %H:%M:%S') [skip ci]"
+          commit_message: "Update snake animation [skip ci]"
