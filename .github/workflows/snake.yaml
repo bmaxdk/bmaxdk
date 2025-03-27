@@ -4,33 +4,45 @@ on:
   # Run daily at midnight UTC
   schedule:
     - cron: "0 0 * * *"
+  # Trigger manually
   workflow_dispatch:
+  # Trigger on push to main
   push:
     branches:
       - main
 
+# Prevent multiple runs from overlapping
 concurrency: github-snake-game
 
-# If you need to auto-update the README, you'll need 'contents: write'
 permissions:
   contents: write
 
 jobs:
   build:
+    # Skip if commit contains [skip ci]
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     strategy:
       fail-fast: false
       matrix:
-        snakeStyle:
-          - "dist/github-snake.svg"
-          - "dist/github-snake-dark.svg?palette=github-dark"
-          - "dist/github-snake-rainbow.svg?color_snake=rainbow&color_dots=#FFE79B,#FFD700,#FD943F,#FC5E5A,#E8006F,#FF84C2"
-          - "dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9"
-          - "dist/neon.svg?color_snake=#FF00FF&color_dots=#39FF14,#FFEA00,#FF00E4,#00E5FF"
-          - "dist/pastel.gif?color_snake=#FFAACC&color_dots=#FFD1DC,#D7FFDC,#C7EFFF,#FFCFCF"
+        include:
+          - styleName: default
+            snakeStyle: "dist/github-snake.svg"
+          - styleName: dark
+            snakeStyle: "dist/github-snake-dark.svg?palette=github-dark"
+          - styleName: rainbow
+            snakeStyle: "dist/github-snake-rainbow.svg?color_snake=rainbow&color_dots=#FFE79B,#FFD700,#FD943F,#FC5E5A,#E8006F,#FF84C2"
+          - styleName: ocean
+            snakeStyle: "dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9"
+          - styleName: neon
+            snakeStyle: "dist/neon.svg?color_snake=#FF00FF&color_dots=#39FF14,#FFEA00,#FF00E4,#00E5FF"
+          - styleName: pastel
+            snakeStyle: "dist/pastel.gif?color_snake=#FFAACC&color_dots=#FFD1DC,#D7FFDC,#C7EFFF,#FFCFCF"
+
     steps:
+      # Check out repository
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -45,6 +57,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-snake-
 
+      # Generate the Snake for the current matrix item
       - name: Generate Snake (matrix)
         uses: Platane/snk@v3
         with:
@@ -56,7 +69,7 @@ jobs:
       - name: Upload Snake Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: "Snake Animations"
+          name: "Snake Animations - ${{ matrix.styleName }}"
           path: dist
 
   deploy:
@@ -67,10 +80,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Download Snake Artifacts
+      # Download each artifact from the build job
+      - name: Download default
         uses: actions/download-artifact@v4
         with:
-          name: "Snake Animations"
+          name: "Snake Animations - default"
+          path: dist
+      - name: Download dark
+        uses: actions/download-artifact@v4
+        with:
+          name: "Snake Animations - dark"
+          path: dist
+      - name: Download rainbow
+        uses: actions/download-artifact@v4
+        with:
+          name: "Snake Animations - rainbow"
+          path: dist
+      - name: Download ocean
+        uses: actions/download-artifact@v4
+        with:
+          name: "Snake Animations - ocean"
+          path: dist
+      - name: Download neon
+        uses: actions/download-artifact@v4
+        with:
+          name: "Snake Animations - neon"
+          path: dist
+      - name: Download pastel
+        uses: actions/download-artifact@v4
+        with:
+          name: "Snake Animations - pastel"
           path: dist
 
       - name: Deploy to Output Branch
@@ -79,4 +118,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: output
+          # Example: add date/time in commit message
           commit_message: "chore: update snake animations on $(date '+%Y-%m-%d %H:%M:%S') [skip ci]"
