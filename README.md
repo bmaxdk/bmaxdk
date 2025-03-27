@@ -49,6 +49,13 @@
 
 <br><br>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bmaxdk/bmaxdk/output/github-snake-dark.svg#gh-dark-mode-only" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bmaxdk/bmaxdk/output/github-snake-rainbow.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/output/github-snake.svg" />
+</picture>
+
+
 <!-- ## My Projects 🚀
 
 - **[ROS2 Navigation and SLAM](https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation):** Building a fully autonomous robot using ROS2 for navigation and SLAM.
