@@ -1,5 +1,4 @@
 <div align="center">
-<img alt="minecraft-contribution" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/main/assets/minecraft-contribution.svg?v=2" />
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120§ion=header&text=Howard%20Cho%20🦾🤖🚀&fontSize=50&animation=twinkling&fontAlignY=40&desc=Robotics%20%7C%20AI%20%7C%20Innovation&descAlignY=65&descAlign=65" />
 
 
@@ -138,6 +137,9 @@ Here are some ideas to get you started:
     <img src="https://github.com/bmaxdk/ROS2-Nav2-with-SLAM-and-Navigation/blob/main/image/drone1.png" alt="Howard's drone project" title="Drone Project" width="500"/>
   </p>
 </details>
+
+<img alt="minecraft-contribution" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/main/assets/minecraft-contribution.svg?v=2" />
+
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&animation=fadeIn" />
 
