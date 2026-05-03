@@ -198,25 +198,23 @@ jobs:
               Block N visibly cracks and disappears during Steve's brief stay at it.
               """
               # ---------- Animation timing ----------
-              TIME_ENTRY = 0.5      # Steve walks in from off-left
-              DWELL = 0.18          # how long Steve visibly dwells at each block
-              HOP = 0.07            # smooth hop to next cell
-              TIME_EXIT = 0.5
-              FADE = 0.12           # block fades during this much of the dwell
+              TIME_ENTRY = 0.7      # Steve walks in from off-left
+              DWELL = 0.22          # how long Steve visibly dwells at each block
+              HOP = 0.10            # smooth slide to next cell
+              TIME_EXIT = 0.7
+              FADE = 0.16           # block fades during this much of the dwell
 
-              # ---------- Collect filled cells ----------
+              # ---------- Collect filled cells in ROW-MAJOR order ----------
+              # Steve mines one row at a time, sweeping left→right across the row,
+              # then drops down to the next row. (Rows = day-of-week in GitHub's calendar.)
               filled = []
-              for c in range(COLS):
-                  for r in range(ROWS):
+              for r in range(ROWS):
+                  for c in range(COLS):
                       count, date = grid.get((c, r), (0, ""))
                       if count > 0:
                           filled.append((c, r, count, date))
 
               N = len(filled)
-              # Deterministic shuffle so the order is consistent for a given run but varies daily
-              seed_str = next(iter(grid.values()), (0, "today"))[1] or "default-seed"
-              rng = random.Random(seed_str)
-              rng.shuffle(filled)
 
               # ---------- Position Steve next to / over each cell ----------
               # Pickaxe pivot is at local (14, 12); pickaxe head sweeps near local x=14..16.
@@ -330,10 +328,10 @@ jobs:
           <rect x="-2" y="-2" width="5" height="2" fill="#B8B8B8"/>
           <rect x="-2" y="-2" width="5" height="1" fill="#D8D8D8"/>
           <animateTransform attributeName="transform" type="rotate"
-            values="-35; 25; -35" dur="0.5s" repeatCount="indefinite"/>
+            values="-35; 25; -35" dur="0.55s" repeatCount="indefinite"/>
           </g></g></g>
           <animateTransform attributeName="transform" type="translate"
-            values="0,0; 0,-1; 0,0" dur="0.5s" repeatCount="indefinite"/>
+            values="0,0; 0,-1; 0,0" dur="0.55s" repeatCount="indefinite"/>
           </g></g>
           <animateTransform attributeName="transform" type="translate"
             values="{walk_values_str}"
