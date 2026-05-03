@@ -1,6 +1,7 @@
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120§ion=header&text=Howard%20Cho%20🦾🤖🚀&fontSize=50&animation=twinkling&fontAlignY=40&desc=Robotics%20%7C%20AI%20%7C%20Innovation&descAlignY=65&descAlign=65" />
 
+<img alt="minecraft-contribution" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/main/assets/minecraft-contribution.svg?v=2" />
 
 
 <h3> 👨‍💻 Robotics Research Software Engineer | Research Scientist | Problem Solver 🧠 </h3>
@@ -138,7 +139,7 @@ Here are some ideas to get you started:
   </p>
 </details>
 
-<img alt="minecraft-contribution" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/main/assets/minecraft-contribution.svg?v=2" />
+<!-- <img alt="minecraft-contribution" src="https://raw.githubusercontent.com/bmaxdk/bmaxdk/main/assets/minecraft-contribution.svg?v=2" /> -->
 
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&animation=fadeIn" />
