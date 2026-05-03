@@ -46,6 +46,7 @@ jobs:
           import sys
           import json
           import urllib.request
+          import random
           import urllib.error
           from datetime import datetime
           from pathlib import Path
@@ -189,12 +190,80 @@ jobs:
           PATTERN_FOR = {k: f"url(#{k})" for k in
                          ["grass1", "grass2", "grass3", "iron", "gold", "diamond"]}
 
-          def build_svg(grid: dict) -> str:
-              """grid is a dict (col, row) -> (count, date)."""
+          def build_svg(grid):
+              """grid is a dict (col, row) -> (count, date).
+
+              Animation: Steve walks INTO the grid, then teleports between filled cells
+              in a (deterministically shuffled) random order, mining each one in turn.
+              Block N visibly cracks and disappears during Steve's brief stay at it.
+              """
+              # ---------- Animation timing ----------
+              TIME_ENTRY = 0.5      # Steve walks in from off-left
+              DWELL = 0.18          # how long Steve visibly dwells at each block
+              HOP = 0.07            # smooth hop to next cell
+              TIME_EXIT = 0.5
+              FADE = 0.12           # block fades during this much of the dwell
+
+              # ---------- Collect filled cells ----------
+              filled = []
+              for c in range(COLS):
+                  for r in range(ROWS):
+                      count, date = grid.get((c, r), (0, ""))
+                      if count > 0:
+                          filled.append((c, r, count, date))
+
+              N = len(filled)
+              # Deterministic shuffle so the order is consistent for a given run but varies daily
+              seed_str = next(iter(grid.values()), (0, "today"))[1] or "default-seed"
+              rng = random.Random(seed_str)
+              rng.shuffle(filled)
+
+              # ---------- Position Steve next to / over each cell ----------
+              # Pickaxe pivot is at local (14, 12); pickaxe head sweeps near local x=14..16.
+              # For Steve standing immediately LEFT of a block with pickaxe over the block:
+              #   steve.x = block_left - 17   (his pickaxe arm reaches into the block)
+              # For Steve at the block's row vertically (body center aligned with block center):
+              #   steve.y = block_top + CELL/2 - 11  (his body height-center is local y=11)
+              def steve_pos_for_cell(c, r):
+                  bx = GRID_LEFT + c * PITCH
+                  by = GRID_TOP  + r * PITCH
+                  return (bx - 17, by + CELL // 2 - 11)
+
+              OFF_LEFT  = (-30, GRID_TOP + 3 * PITCH - 11)   # off-screen at middle row height
+              OFF_RIGHT = (WIDTH + 20, GRID_TOP + 3 * PITCH - 11)
+
+              # ---------- Build Steve's movement path ----------
+              if N == 0:
+                  # No contributions to mine — just have Steve cross the grid once
+                  TOTAL_DUR = 4.0
+                  path_values = [OFF_LEFT, OFF_RIGHT]
+                  path_times = [0.0, 1.0]
+              else:
+                  # values: off_left → (pos_i, pos_i for each i, repeated for dwell) → off_right
+                  TOTAL_DUR = TIME_ENTRY + (N - 1) * HOP + N * DWELL + TIME_EXIT
+
+                  path_values = [OFF_LEFT]
+                  path_times = [0.0]
+                  for i, (c, r, _count, _date) in enumerate(filled):
+                      arrive_t = TIME_ENTRY + i * (DWELL + HOP)
+                      depart_t = arrive_t + DWELL
+                      xy = steve_pos_for_cell(c, r)
+                      path_values.append(xy);  path_times.append(arrive_t)
+                      path_values.append(xy);  path_times.append(depart_t)
+                  path_values.append(OFF_RIGHT)
+                  path_times.append(TOTAL_DUR)
+                  # Normalize and ensure first/last are exactly 0/1
+                  path_times = [t / TOTAL_DUR for t in path_times]
+                  path_times[0] = 0.0
+                  path_times[-1] = 1.0
+
+              walk_values_str = "; ".join(f"{x},{y}" for (x, y) in path_values)
+              walk_keytimes_str = ";".join(f"{k:.4f}" for k in path_times)
+
+              # ---------- Build the cell rectangles ----------
               blocks = []
 
-              # Layer 1: ALL cells get a faint gray fill (works on light AND dark GitHub themes).
-              # Filled cells will draw on top of these in layer 2.
+              # Layer 1: ALL cells get a faint gray fill (works on light AND dark themes)
               for c in range(COLS):
                   for r in range(ROWS):
                       x = GRID_LEFT + c * PITCH
@@ -204,48 +273,40 @@ jobs:
                           f'rx="2" fill="{EMPTY_FILL}" opacity="{EMPTY_OPACITY}"/>'
                       )
 
-              # Layer 2: filled blocks with mining animation, timed by Steve's column.
-              rect_count = 0
-              for c in range(COLS):
-                  for r in range(ROWS):
-                      count, _date = grid.get((c, r), (0, None))
-                      t = block_for_count(count)
-                      if t is None:
-                          continue
-                      x = GRID_LEFT + c * PITCH
-                      y = GRID_TOP + r * PITCH
-                      # Block breaks when Steve's body center reaches the block center.
-                      # Steve's local origin is at his left edge; sprite spans -1..14,
-                      # so body center is at +7 in his local frame.
-                      block_center = x + CELL / 2
-                      # Block breaks when Steve's pickaxe (rightmost part of his sprite,
-                      # at +14 in his local frame) passes over the block's center.
-                      # This matches the intuition "what the pickaxe touches gets mined."
-                      PICKAXE_OFFSET = 14
-                      mine_at = max(0.02, (block_center - PICKAXE_OFFSET - START_X)
-                                    * WALK_DUR / (END_X - START_X))
-                      # Near-instant snap: 0.04s fade, no flicker, no drop.
-                      FADE = 0.04
-                      k_break = mine_at / TOTAL_DUR
-                      k_gone  = (mine_at + FADE) / TOTAL_DUR
-                      blocks.append(
-                          f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
-                          f'fill="{PATTERN_FOR[t]}">'
-                          f'<animate attributeName="opacity" values="1;1;0;0" '
-                          f'keyTimes="0;{k_break:.4f};{k_gone:.4f};1" '
-                          f'dur="{TOTAL_DUR}s" repeatCount="indefinite"/>'
-                          f'</rect>'
-                      )
-                      rect_count += 1
+              # Layer 2: filled blocks. Each block fades during its visit slot.
+              for visit_i, (c, r, count, _date) in enumerate(filled):
+                  x = GRID_LEFT + c * PITCH
+                  y = GRID_TOP + r * PITCH
+                  t = block_for_count(count)
+                  arrive_t = TIME_ENTRY + visit_i * (DWELL + HOP)
+                  # Fade window: small delay so user sees Steve land, then block cracks & vanishes
+                  fade_start = arrive_t + 0.04
+                  fade_mid   = fade_start + FADE * 0.45
+                  fade_end   = arrive_t + DWELL - 0.02   # done just before Steve hops away
+                  k0 = fade_start / TOTAL_DUR
+                  k1 = fade_mid   / TOTAL_DUR
+                  k2 = fade_end   / TOTAL_DUR
+                  blocks.append(
+                      f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
+                      f'fill="{PATTERN_FOR[t]}">'
+                      f'<animate attributeName="opacity" values="1;1;0.45;0;0" '
+                      f'keyTimes="0;{k0:.4f};{k1:.4f};{k2:.4f};1" '
+                      f'dur="{TOTAL_DUR}s" repeatCount="indefinite"/>'
+                      f'</rect>'
+                  )
 
-              cells_svg = "<g id=\"grid\">" + "\n".join(blocks) + "</g>"
+              cells_svg = '<g id="grid">' + "".join(blocks) + "</g>"
 
+              # ---------- Ground line under the grid ----------
               ground_y = GRID_TOP + GRID_H + 2
               ground = (
                   f'<g><rect x="0" y="{ground_y}" width="{WIDTH}" height="3" fill="#5C3E1F"/>'
                   f'<rect x="0" y="{ground_y+3}" width="{WIDTH}" height="1" fill="#3D2817"/></g>'
               )
 
+              # ---------- Steve sprite ----------
+              # Note: outer translate animation uses calcMode="linear" with the path/keyTimes
+              # built above. Repeated values create dwell phases at each cell.
               steve = f'''<g id="steve"><g><g>
           <rect x="2" y="0" width="9" height="2" fill="#2D1B0E"/>
           <rect x="1" y="2" width="11" height="1" fill="#2D1B0E"/>
@@ -269,33 +330,24 @@ jobs:
           <rect x="-2" y="-2" width="5" height="2" fill="#B8B8B8"/>
           <rect x="-2" y="-2" width="5" height="1" fill="#D8D8D8"/>
           <animateTransform attributeName="transform" type="rotate"
-            values="-35; 25; -35" dur="0.7s" repeatCount="indefinite"/>
+            values="-35; 25; -35" dur="0.5s" repeatCount="indefinite"/>
           </g></g></g>
           <animateTransform attributeName="transform" type="translate"
-            values="0,0; 0,-1; 0,0" dur="0.7s" repeatCount="indefinite"/>
+            values="0,0; 0,-1; 0,0" dur="0.5s" repeatCount="indefinite"/>
           </g></g>
           <animateTransform attributeName="transform" type="translate"
-            values="{START_X},{STEVE_Y}; {END_X},{STEVE_Y}"
-            dur="{WALK_DUR}s" repeatCount="indefinite"/></g>'''
-
-              sparks = f'''<g id="sparks" opacity="0.75"><g>
-          <rect x="0" y="0" width="1" height="1" fill="#FFD060"/>
-          <rect x="2" y="-1" width="1" height="1" fill="#FFFFFF"/>
-          <rect x="-2" y="1" width="1" height="1" fill="#FFC040"/>
-          <animate attributeName="opacity"
-            values="0;0.9;0;0;0.9;0;0;0.9;0" dur="{TOTAL_DUR}s" repeatCount="indefinite"/>
-          <animateTransform attributeName="transform" type="translate"
-            values="{START_X+15},{STEVE_Y+11}; {END_X+15},{STEVE_Y+11}"
-            dur="{WALK_DUR}s" repeatCount="indefinite"/>
-          </g></g>'''
+            values="{walk_values_str}"
+            keyTimes="{walk_keytimes_str}"
+            dur="{TOTAL_DUR}s" repeatCount="indefinite"/></g>'''
 
               return (
                   f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" '
                   f'width="{WIDTH}" height="{HEIGHT}" role="img" '
                   f'aria-label="Minecraft contribution graph">'
                   f'<title>Minecraft contribution graph</title>'
-                  f'{DEFS}{cells_svg}{ground}{sparks}{steve}</svg>'
+                  f'{DEFS}{cells_svg}{ground}{steve}</svg>'
               )
+
 
           def main():
               out_path = os.environ.get("OUT_PATH", "minecraft-contribution.svg")
