@@ -425,9 +425,19 @@ jobs:
           <g><rect x="12" y="9" width="2" height="7" fill="#E8B080"/>
           <rect x="12" y="9" width="2" height="1" fill="#1F7888"/>
           <g transform="translate(14,12)"><g>
-          <rect x="0" y="-1" width="1" height="9" fill="#7B4F2C"/>
-          <rect x="-2" y="-2" width="5" height="2" fill="#B8B8B8"/>
-          <rect x="-2" y="-2" width="5" height="1" fill="#D8D8D8"/>
+          <!-- Chunky Minecraft iron pickaxe held in Steve's right hand.
+               Handle is the wood; head is the iron T-shape. -->
+          <!-- Wooden handle (vertical, 2px wide × 10px) -->
+          <rect x="0" y="-2" width="2" height="10" fill="#8B5A2B"/>
+          <rect x="0" y="-2" width="1" height="10" fill="#A06A38"/>
+          <!-- Iron pickaxe head (T-shape on top of handle) -->
+          <rect x="-3" y="-4" width="8" height="3" fill="#B8B8B8"/>
+          <rect x="-3" y="-4" width="8" height="1" fill="#D8D8D8"/>
+          <rect x="-4" y="-3" width="1" height="1" fill="#7C7C7C"/>
+          <rect x="5" y="-3" width="1" height="1" fill="#7C7C7C"/>
+          <!-- Pointed tips -->
+          <rect x="-5" y="-3" width="1" height="1" fill="#909090"/>
+          <rect x="6" y="-3" width="1" height="1" fill="#909090"/>
           <animateTransform attributeName="transform" type="rotate"
             values="-35; 25; -35" dur="0.75s" repeatCount="indefinite"/>
           </g></g></g>
