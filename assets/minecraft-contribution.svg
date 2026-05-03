@@ -546,13 +546,13 @@
 <rect x="-1" y="9" width="2" height="1" fill="#1F7888"/>
 <g><rect x="12" y="9" width="2" height="7" fill="#E8B080"/>
 <rect x="12" y="9" width="2" height="1" fill="#1F7888"/>
-<g transform="translate(14,12)">
+<g transform="translate(14,12)"><g>
 <rect x="0" y="-1" width="1" height="9" fill="#7B4F2C"/>
 <rect x="-2" y="-2" width="5" height="2" fill="#B8B8B8"/>
 <rect x="-2" y="-2" width="5" height="1" fill="#D8D8D8"/>
 <animateTransform attributeName="transform" type="rotate"
-  values="-35 14 12; 25 14 12; -35 14 12" dur="0.7s" repeatCount="indefinite"/>
-</g></g>
+  values="-35; 25; -35" dur="0.7s" repeatCount="indefinite"/>
+</g></g></g>
 <animateTransform attributeName="transform" type="translate"
   values="0,0; 0,-1; 0,0" dur="0.7s" repeatCount="indefinite"/>
 </g></g>
