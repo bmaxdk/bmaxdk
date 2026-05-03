@@ -295,6 +295,68 @@ jobs:
 
               cells_svg = '<g id="grid">' + "".join(blocks) + "</g>"
 
+              # ---------- Sky background (drawn behind grid) ----------
+              # Soft Minecraft-style daytime gradient
+              sky = (
+                  '<defs>'
+                  '<linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">'
+                  '<stop offset="0%" stop-color="#87CEEB"/>'      # light sky blue at top
+                  '<stop offset="100%" stop-color="#C8E6F5"/>'    # almost white at horizon
+                  '</linearGradient>'
+                  '</defs>'
+                  f'<rect x="0" y="0" width="{WIDTH}" height="{GRID_TOP + GRID_H + 2}" '
+                  f'fill="url(#skyGrad)"/>'
+              )
+
+              # Pixel-art sun (top-right corner)
+              sun_x, sun_y = WIDTH - 28, 6
+              sun = (
+                  f'<g id="sun">'
+                  f'<rect x="{sun_x+4}" y="{sun_y}" width="12" height="2" fill="#FFE680"/>'
+                  f'<rect x="{sun_x+2}" y="{sun_y+2}" width="16" height="2" fill="#FFE680"/>'
+                  f'<rect x="{sun_x}" y="{sun_y+4}" width="20" height="12" fill="#FFE680"/>'
+                  f'<rect x="{sun_x+2}" y="{sun_y+16}" width="16" height="2" fill="#FFE680"/>'
+                  f'<rect x="{sun_x+4}" y="{sun_y+18}" width="12" height="2" fill="#FFE680"/>'
+                  # inner highlight
+                  f'<rect x="{sun_x+4}" y="{sun_y+4}" width="12" height="12" fill="#FFF4B0"/>'
+                  f'<rect x="{sun_x+6}" y="{sun_y+6}" width="8" height="8" fill="#FFFFE0"/>'
+                  f'</g>'
+              )
+
+              # Pixel-art clouds (white blocky shapes drifting slowly across the sky).
+              # Clouds are drawn as compositions of small rectangles, then translated
+              # across the full width with a long-period animateTransform.
+              def cloud_shape(scale=1):
+                  s = scale
+                  return (
+                      f'<rect x="0" y="{2*s}" width="{6*s}" height="{2*s}" fill="#FFFFFF"/>'
+                      f'<rect x="{2*s}" y="0" width="{8*s}" height="{2*s}" fill="#FFFFFF"/>'
+                      f'<rect x="0" y="{4*s}" width="{14*s}" height="{2*s}" fill="#FFFFFF"/>'
+                      f'<rect x="{4*s}" y="{6*s}" width="{8*s}" height="{2*s}" fill="#FFFFFF"/>'
+                      # slight shading at the bottom for depth
+                      f'<rect x="{2*s}" y="{6*s}" width="{2*s}" height="{2*s}" fill="#E6E6F0"/>'
+                      f'<rect x="{12*s}" y="{4*s}" width="{2*s}" height="{2*s}" fill="#E6E6F0"/>'
+                  )
+
+              # Three clouds at different heights and speeds, all drifting left→right
+              clouds = (
+                  f'<g id="cloud1" opacity="0.85"><g>{cloud_shape(1)}'
+                  f'<animateTransform attributeName="transform" type="translate" '
+                  f'values="-20,0; {WIDTH+30},0" dur="60s" repeatCount="indefinite"/>'
+                  f'</g><animateTransform attributeName="transform" type="translate" '
+                  f'from="0,4" to="0,4" dur="1s"/></g>'
+                  f'<g id="cloud2" opacity="0.75"><g>{cloud_shape(1)}'
+                  f'<animateTransform attributeName="transform" type="translate" '
+                  f'values="-30,0; {WIDTH+30},0" dur="80s" begin="-25s" repeatCount="indefinite"/>'
+                  f'</g><animateTransform attributeName="transform" type="translate" '
+                  f'from="0,16" to="0,16" dur="1s"/></g>'
+                  f'<g id="cloud3" opacity="0.9"><g>{cloud_shape(1)}'
+                  f'<animateTransform attributeName="transform" type="translate" '
+                  f'values="-20,0; {WIDTH+30},0" dur="100s" begin="-50s" repeatCount="indefinite"/>'
+                  f'</g><animateTransform attributeName="transform" type="translate" '
+                  f'from="0,10" to="0,10" dur="1s"/></g>'
+              )
+
               # ---------- Ground line under the grid ----------
               ground_y = GRID_TOP + GRID_H + 2
               ground = (
@@ -343,7 +405,7 @@ jobs:
                   f'width="{WIDTH}" height="{HEIGHT}" role="img" '
                   f'aria-label="Minecraft contribution graph">'
                   f'<title>Minecraft contribution graph</title>'
-                  f'{DEFS}{cells_svg}{ground}{steve}</svg>'
+                  f'{DEFS}{sky}{sun}{clouds}{cells_svg}{ground}{steve}</svg>'
               )
 
 
