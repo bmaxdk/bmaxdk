@@ -179,6 +179,10 @@ jobs:
               <rect x="2" y="2" width="1" height="1" fill="#8FE0EE"/>
               <rect x="6" y="6" width="2" height="2" fill="#4FBED1"/>
             </pattern>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#87CEEB"/>
+              <stop offset="100%" stop-color="#C8E6F5"/>
+            </linearGradient>
           </defs>
           """
 
@@ -296,14 +300,8 @@ jobs:
               cells_svg = '<g id="grid">' + "".join(blocks) + "</g>"
 
               # ---------- Sky background (drawn behind grid) ----------
-              # Soft Minecraft-style daytime gradient
+              # Gradient is defined in the top-level DEFS; just paint a rect here
               sky = (
-                  '<defs>'
-                  '<linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">'
-                  '<stop offset="0%" stop-color="#87CEEB"/>'      # light sky blue at top
-                  '<stop offset="100%" stop-color="#C8E6F5"/>'    # almost white at horizon
-                  '</linearGradient>'
-                  '</defs>'
                   f'<rect x="0" y="0" width="{WIDTH}" height="{GRID_TOP + GRID_H + 2}" '
                   f'fill="url(#skyGrad)"/>'
               )
