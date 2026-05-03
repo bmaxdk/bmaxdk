@@ -218,11 +218,14 @@ jobs:
                       # Steve's local origin is at his left edge; sprite spans -1..14,
                       # so body center is at +7 in his local frame.
                       block_center = x + CELL / 2
-                      STEVE_CENTER = 7
-                      mine_at = max(0.02, (block_center - STEVE_CENTER - START_X)
+                      # Block breaks when Steve's pickaxe (rightmost part of his sprite,
+                      # at +14 in his local frame) passes over the block's center.
+                      # This matches the intuition "what the pickaxe touches gets mined."
+                      PICKAXE_OFFSET = 14
+                      mine_at = max(0.02, (block_center - PICKAXE_OFFSET - START_X)
                                     * WALK_DUR / (END_X - START_X))
-                      # Snap break: full opacity until impact, then 0.10s clean fade.
-                      FADE = 0.10
+                      # Near-instant snap: 0.04s fade, no flicker, no drop.
+                      FADE = 0.04
                       k_break = mine_at / TOTAL_DUR
                       k_gone  = (mine_at + FADE) / TOTAL_DUR
                       blocks.append(
