@@ -1,0 +1,49 @@
+name: Generate Minecraft Contribution Graph
+
+on:
+  # Run daily at 00:00 UTC
+  schedule:
+    - cron: "0 0 * * *"
+  # Allow manual triggering from the Actions tab
+  workflow_dispatch:
+  # Re-run when the script or workflow itself changes
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/minecraft-contribution.yml"
+      - ".github/scripts/generate_minecraft_contribution.py"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate Minecraft contribution SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+          OUT_PATH: assets/minecraft-contribution.svg
+        run: |
+          mkdir -p assets
+          python .github/scripts/generate_minecraft_contribution.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/minecraft-contribution.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update minecraft contribution graph [skip ci]"
+            git push
+          fi
