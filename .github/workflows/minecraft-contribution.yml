@@ -6,12 +6,12 @@ on:
     - cron: "0 0 * * *"
   # Allow manual triggering from the Actions tab
   workflow_dispatch:
-  # Re-run when the script or workflow itself changes
+  # Re-run when the workflow or script itself changes
   push:
     branches: [main]
     paths:
       - ".github/workflows/minecraft-contribution.yml"
-      - ".github/scripts/generate_minecraft_contribution.py"
+      - ".github/workflows/generate_minecraft_contribution.py"
 
 jobs:
   generate:
@@ -34,7 +34,7 @@ jobs:
           OUT_PATH: assets/minecraft-contribution.svg
         run: |
           mkdir -p assets
-          python .github/scripts/generate_minecraft_contribution.py
+          python .github/workflows/generate_minecraft_contribution.py
 
       - name: Commit if changed
         run: |
