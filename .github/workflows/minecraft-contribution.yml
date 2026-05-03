@@ -179,33 +179,17 @@ jobs:
               <rect x="2" y="2" width="1" height="1" fill="#8FE0EE"/>
               <rect x="6" y="6" width="2" height="2" fill="#4FBED1"/>
             </pattern>
-            <linearGradient id="skyDay" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#87CEEB"/>
-              <stop offset="100%" stop-color="#C8E6F5"/>
-            </linearGradient>
             <linearGradient id="skyNight" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#0B1A3A"/>
               <stop offset="100%" stop-color="#1E2F55"/>
             </linearGradient>
           </defs>
-          <style>
-          /* Day defaults: show sun, hide moon and stars */
-          .sky { fill: url(#skyDay); }
-          .day-only { display: inline; }
-          .night-only { display: none; }
-          /* Night theme: dark sky, hide sun, show moon and stars */
-          @media (prefers-color-scheme: dark) {
-            .sky { fill: url(#skyNight); }
-            .day-only { display: none; }
-            .night-only { display: inline; }
-          }
-          </style>
           """
 
           # Empty-cell fill — neutral gray with low opacity, readable on light AND dark themes
           # (GitHub uses #ebedf0 on light, #161b22 on dark; this is a compromise that blends with both)
-          EMPTY_FILL = "#7d7d7d"
-          EMPTY_OPACITY = "0.18"
+          EMPTY_FILL = "#9098B0"
+          EMPTY_OPACITY = "0.22"
 
           PATTERN_FOR = {k: f"url(#{k})" for k in
                          ["grass1", "grass2", "grass3", "iron", "gold", "diamond"]}
@@ -315,50 +299,35 @@ jobs:
 
               cells_svg = '<g id="grid">' + "".join(blocks) + "</g>"
 
-              # ---------- Sky background (drawn behind grid) ----------
-              # CSS swaps the gradient between day and night based on prefers-color-scheme
+              # ---------- Always-night sky ----------
               sky = (
-                  f'<rect class="sky" x="0" y="0" width="{WIDTH}" '
-                  f'height="{GRID_TOP + GRID_H + 2}"/>'
+                  f'<rect x="0" y="0" width="{WIDTH}" '
+                  f'height="{GRID_TOP + GRID_H + 2}" fill="url(#skyNight)"/>'
               )
 
-              # Pixel-art sun (day theme only)
-              sun_x, sun_y = WIDTH - 28, 6
-              sun = (
-                  f'<g id="sun" class="day-only">'
-                  f'<rect x="{sun_x+4}" y="{sun_y}" width="12" height="2" fill="#FFE680"/>'
-                  f'<rect x="{sun_x+2}" y="{sun_y+2}" width="16" height="2" fill="#FFE680"/>'
-                  f'<rect x="{sun_x}" y="{sun_y+4}" width="20" height="12" fill="#FFE680"/>'
-                  f'<rect x="{sun_x+2}" y="{sun_y+16}" width="16" height="2" fill="#FFE680"/>'
-                  f'<rect x="{sun_x+4}" y="{sun_y+18}" width="12" height="2" fill="#FFE680"/>'
-                  # inner highlight
-                  f'<rect x="{sun_x+4}" y="{sun_y+4}" width="12" height="12" fill="#FFF4B0"/>'
-                  f'<rect x="{sun_x+6}" y="{sun_y+6}" width="8" height="8" fill="#FFFFE0"/>'
-                  f'</g>'
-              )
-
-              # Pixel-art moon — crescent (night theme only). Same corner as sun.
+              # Pixel-art crescent moon in top-right corner
               moon_x, moon_y = WIDTH - 28, 6
               moon = (
-                  f'<g id="moon" class="night-only">'
+                  f'<g id="moon">'
                   # outer disc
                   f'<rect x="{moon_x+4}" y="{moon_y}" width="12" height="2" fill="#E8E8F0"/>'
                   f'<rect x="{moon_x+2}" y="{moon_y+2}" width="16" height="2" fill="#E8E8F0"/>'
                   f'<rect x="{moon_x}" y="{moon_y+4}" width="20" height="12" fill="#E8E8F0"/>'
                   f'<rect x="{moon_x+2}" y="{moon_y+16}" width="16" height="2" fill="#E8E8F0"/>'
                   f'<rect x="{moon_x+4}" y="{moon_y+18}" width="12" height="2" fill="#E8E8F0"/>'
-                  # crescent shadow (offset to upper-right makes a left-facing crescent)
+                  # crescent shadow (sky-colored bite from the right)
                   f'<rect x="{moon_x+8}" y="{moon_y}" width="8" height="2" fill="#1E2F55"/>'
                   f'<rect x="{moon_x+8}" y="{moon_y+2}" width="10" height="2" fill="#1E2F55"/>'
                   f'<rect x="{moon_x+8}" y="{moon_y+4}" width="12" height="10" fill="#1E2F55"/>'
-                  # surface highlight on the lit side
+                  # surface highlights on the lit crescent
                   f'<rect x="{moon_x+4}" y="{moon_y+6}" width="2" height="2" fill="#FFFFFF"/>'
                   f'<rect x="{moon_x+2}" y="{moon_y+10}" width="2" height="2" fill="#FFFFFF"/>'
                   f'</g>'
               )
+              # Sun is gone in always-night mode
+              sun = ""
 
-              # Twinkling pixel stars (night theme only). Use opacity animation for twinkle.
-              # Spread across the upper portion of the sky in a fixed pattern.
+              # Twinkling pixel stars across the upper sky
               star_positions = [
                   (40, 8, 3.0), (95, 18, 4.5), (155, 6, 3.7), (210, 22, 5.1),
                   (265, 12, 3.3), (320, 26, 4.0), (380, 4, 4.7), (435, 18, 3.5),
@@ -369,12 +338,11 @@ jobs:
               star_tags = []
               for sx, sy, dur in star_positions:
                   star_tags.append(
-                      f'<g class="night-only">'
+                      f'<g>'
                       f'<rect x="{sx}" y="{sy}" width="1" height="1" fill="#FFFFFF">'
                       f'<animate attributeName="opacity" values="0.3;1;0.3" '
                       f'dur="{dur}s" repeatCount="indefinite"/>'
                       f'</rect>'
-                      # plus a tiny cross for some stars (every 3rd)
                       + (
                           f'<rect x="{sx-1}" y="{sy}" width="1" height="1" fill="#FFFFFF" opacity="0.4">'
                           f'<animate attributeName="opacity" values="0.1;0.7;0.1" '
