@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 """Generate a Minecraft-themed contribution SVG using REAL GitHub data.
+
+Designed to run inside a GitHub Action. Reads:
+  GITHUB_TOKEN   — auto-provided by Actions
+  GH_USERNAME    — set in workflow env
+  OUT_PATH       — output file path (default: ./minecraft-contribution.svg)
+
 Fetches the user's contribution calendar via GitHub's GraphQL API, maps daily
 commit counts to Minecraft block types, and writes a self-contained animated
 SVG with Steve walking across mining the blocks.
@@ -20,10 +26,14 @@ GAP = 3
 PITCH = CELL + GAP            # 13
 GRID_W = COLS * PITCH - GAP   # 686
 GRID_H = ROWS * PITCH - GAP   # 88
-WIDTH = 882
-HEIGHT = 170
-GRID_LEFT = (WIDTH - GRID_W) // 2  # 98
-GRID_TOP = 50
+
+# Tight canvas — grid dominates, minimal padding (matches GitHub layout)
+GRID_LEFT = 30                # left margin (room for day labels)
+GRID_TOP = 36                 # top margin (room for month labels + Steve)
+RIGHT_PAD = 30
+BOTTOM_PAD = 14
+WIDTH = GRID_LEFT + GRID_W + RIGHT_PAD       # 746
+HEIGHT = GRID_TOP + GRID_H + BOTTOM_PAD      # 138
 
 # ---------- Animation timing ----------
 TOTAL_DUR = 45.0
@@ -139,8 +149,10 @@ DEFS = """
 </defs>
 """
 
-# Empty-cell color matching GitHub's contribution graph (light theme)
-EMPTY_FILL = "#ebedf0"
+# Empty-cell fill — neutral gray with low opacity, readable on light AND dark themes
+# (GitHub uses #ebedf0 on light, #161b22 on dark; this is a compromise that blends with both)
+EMPTY_FILL = "#7d7d7d"
+EMPTY_OPACITY = "0.18"
 
 PATTERN_FOR = {k: f"url(#{k})" for k in
                ["grass1", "grass2", "grass3", "iron", "gold", "diamond"]}
@@ -149,7 +161,7 @@ def build_svg(grid: dict) -> str:
     """grid is a dict (col, row) -> (count, date)."""
     blocks = []
 
-    # Layer 1: ALL cells get a solid empty-style fill
+    # Layer 1: ALL cells get a faint gray fill (works on light AND dark GitHub themes).
     # Filled cells will draw on top of these in layer 2.
     for c in range(COLS):
         for r in range(ROWS):
@@ -157,7 +169,7 @@ def build_svg(grid: dict) -> str:
             y = GRID_TOP + r * PITCH
             blocks.append(
                 f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
-                f'rx="2" fill="{EMPTY_FILL}"/>'
+                f'rx="2" fill="{EMPTY_FILL}" opacity="{EMPTY_OPACITY}"/>'
             )
 
     # Layer 2: filled blocks with mining animation, timed by Steve's column.
