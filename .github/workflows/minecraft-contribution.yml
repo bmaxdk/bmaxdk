@@ -68,8 +68,8 @@ jobs:
           HEIGHT = GRID_TOP + GRID_H + BOTTOM_PAD      # 138
 
           # ---------- Animation timing ----------
-          TOTAL_DUR = 45.0
           WALK_DUR = 42.0
+          TOTAL_DUR = WALK_DUR  # no dead zone — loop wraps instantly when Steve exits
           START_X = -25
           END_X = WIDTH + 5
           STEVE_Y = GRID_TOP - 26
@@ -214,27 +214,22 @@ jobs:
                           continue
                       x = GRID_LEFT + c * PITCH
                       y = GRID_TOP + r * PITCH
-                      # Pickaxe contact point sits ~15px right of Steve's local origin.
-                      # Solve for the moment the pickaxe head is centered over this block.
+                      # Block breaks when Steve's body center reaches the block center.
+                      # Steve's local origin is at his left edge; sprite spans -1..14,
+                      # so body center is at +7 in his local frame.
                       block_center = x + CELL / 2
-                      PICK_OFFSET = 15
-                      mine_at = max(0.05, (block_center - PICK_OFFSET - START_X)
+                      STEVE_CENTER = 7
+                      mine_at = max(0.02, (block_center - STEVE_CENTER - START_X)
                                     * WALK_DUR / (END_X - START_X))
-                      # Crack-flicker timeline (0.20s total): dim → bright → gone.
-                      t_crack = mine_at
-                      t_flash = mine_at + 0.06
-                      t_gone  = mine_at + 0.18
-                      k_crack = t_crack / TOTAL_DUR
-                      k_flash = t_flash / TOTAL_DUR
-                      k_gone  = t_gone  / TOTAL_DUR
+                      # Snap break: full opacity until impact, then 0.10s clean fade.
+                      FADE = 0.10
+                      k_break = mine_at / TOTAL_DUR
+                      k_gone  = (mine_at + FADE) / TOTAL_DUR
                       blocks.append(
                           f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" '
                           f'fill="{PATTERN_FOR[t]}">'
-                          f'<animate attributeName="opacity" values="1;1;0.45;0.85;0;0" '
-                          f'keyTimes="0;{k_crack:.4f};{(k_crack+k_flash)/2:.4f};{k_flash:.4f};{k_gone:.4f};1" '
-                          f'dur="{TOTAL_DUR}s" repeatCount="indefinite"/>'
-                          f'<animate attributeName="y" values="{y};{y};{y+1};{y+1}" '
-                          f'keyTimes="0;{k_crack:.4f};{k_gone:.4f};1" '
+                          f'<animate attributeName="opacity" values="1;1;0;0" '
+                          f'keyTimes="0;{k_break:.4f};{k_gone:.4f};1" '
                           f'dur="{TOTAL_DUR}s" repeatCount="indefinite"/>'
                           f'</rect>'
                       )
