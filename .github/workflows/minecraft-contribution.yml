@@ -200,7 +200,7 @@ jobs:
               # ---------- Animation timing ----------
               TIME_ENTRY = 1.0      # Steve walks in from off-left
               DWELL = 0.35          # how long Steve visibly dwells at each block
-              HOP = 0.15            # smooth slide to next cell
+              HOP = 0.35            # smooth slide to next cell (slowed for visible walking)
               TIME_EXIT = 1.0
               FADE = 0.25           # block fades during this much of the dwell
 
