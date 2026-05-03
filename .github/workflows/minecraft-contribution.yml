@@ -198,11 +198,11 @@ jobs:
               Block N visibly cracks and disappears during Steve's brief stay at it.
               """
               # ---------- Animation timing ----------
-              TIME_ENTRY = 0.7      # Steve walks in from off-left
-              DWELL = 0.22          # how long Steve visibly dwells at each block
-              HOP = 0.10            # smooth slide to next cell
-              TIME_EXIT = 0.7
-              FADE = 0.16           # block fades during this much of the dwell
+              TIME_ENTRY = 1.0      # Steve walks in from off-left
+              DWELL = 0.35          # how long Steve visibly dwells at each block
+              HOP = 0.15            # smooth slide to next cell
+              TIME_EXIT = 1.0
+              FADE = 0.25           # block fades during this much of the dwell
 
               # ---------- Collect filled cells in ROW-MAJOR order ----------
               # Steve mines one row at a time, sweeping left→right across the row,
@@ -328,10 +328,10 @@ jobs:
           <rect x="-2" y="-2" width="5" height="2" fill="#B8B8B8"/>
           <rect x="-2" y="-2" width="5" height="1" fill="#D8D8D8"/>
           <animateTransform attributeName="transform" type="rotate"
-            values="-35; 25; -35" dur="0.55s" repeatCount="indefinite"/>
+            values="-35; 25; -35" dur="0.75s" repeatCount="indefinite"/>
           </g></g></g>
           <animateTransform attributeName="transform" type="translate"
-            values="0,0; 0,-1; 0,0" dur="0.55s" repeatCount="indefinite"/>
+            values="0,0; 0,-1; 0,0" dur="0.75s" repeatCount="indefinite"/>
           </g></g>
           <animateTransform attributeName="transform" type="translate"
             values="{walk_values_str}"
